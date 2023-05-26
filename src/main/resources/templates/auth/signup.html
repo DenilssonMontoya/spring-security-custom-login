@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/styles/bootstrap/bootstrap.min.css}"
+          rel="stylesheet"/>
+    <script th:src="@{/scripts/bootstrap/bootstrap.bundle.js}"
+            type="text/javascript"></script>
+    <script th:src="@{/scripts/jquery/jquery.js}"
+            type="text/javascript"></script>
+</head>
+<body>
+
+<div class="card ">
+
+    <div class="card-header text-bg-dark mb-3">
+        New User
+    </div>
+    <form method="post" th:action="@{/auth/saveUser}">
+
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="userName" class="form-label">user</label>
+                <input type="text" class="form-control" id="userName" name="userName" placeholder="user">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">email</label>
+                <input type="text" class="form-control" id= "email" name="email" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">password</label>
+                <input type="password" class="form-control" id= "password" name="password" placeholder="*****">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Sing Up</button>
+
+        </div>
+    </form>
+</div>
+</body>
+</html>
